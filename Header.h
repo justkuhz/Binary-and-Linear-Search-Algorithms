@@ -8,6 +8,8 @@
 
 using namespace std;
 
+//TODO: move comp print/tracker into main and pass by reference
+
 /*
 * Create and return a vector with of size n and randomly fill with values between a range of [-3*n, 3*n].
 * We use the mersenne twister engine to generate random numbers that is based on the Mersenne Twister algo.
@@ -52,7 +54,6 @@ int binarySearch(vector<int> v, int key) {
 
 		comp++;
 		if (v[pivot] == key) return pivot;
-		comp++;
 		if (key > v[pivot]) left = pivot + 1;
 		else right = pivot - 1;
 	}
