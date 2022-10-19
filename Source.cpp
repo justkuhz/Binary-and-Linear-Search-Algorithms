@@ -20,21 +20,21 @@ int main() {
 	auto start = chrono::steady_clock::now();
 	sort(v1.begin(), v1.end());
 	auto end = chrono::steady_clock::now();
-	chrono::duration<double> elapsed_seconds = end - start;
-	cout << "Quicksort sorting time: " << elapsed_seconds.count() << " (s)\n\n";
+	chrono::duration<double> elapsed_seconds = (end - start) * 1000;
+	cout << "Quicksort sorting time: " << elapsed_seconds.count() << " (ms)\n\n";
 
 	// binary search
-	start = chrono::steady_clock::now();
+	auto start2 = chrono::steady_clock::now();
 	int bs = binarySearch(v1, key, BScomp);
-	end = chrono::steady_clock::now();
-	elapsed_seconds = end - start;
+	auto end2 = chrono::steady_clock::now();
+	elapsed_seconds = (end2 - start2) * 1000;
 	printResults("Binary Search", bs, BScomp, elapsed_seconds);
 
 	// linear search
-	start = chrono::steady_clock::now();
+	auto start3 = chrono::steady_clock::now();
 	int ls = linearSearch(v2, key, LScomp);
-	end = chrono::steady_clock::now();
-	elapsed_seconds = end - start;
+	auto end3 = chrono::steady_clock::now();
+	elapsed_seconds = (end3 - start3) * 1000;
 	printResults("Linear Search", ls, LScomp, elapsed_seconds);
 	
 	return 0;

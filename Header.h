@@ -92,5 +92,5 @@ void printResults(string search, int keyFound, int comp, chrono::duration<double
 	if (keyFound >= 0) printf("Key Found at index: %d\n", keyFound);
 	else printf("Key was not found\n");
 	printf("Comparisons made: %d\n", comp);
-	cout << "Search time: " << time.count() << "(s)\n\n";
+	cout << "Search time: " << time.count() << "(ms)\n\n";
 }
