@@ -43,7 +43,7 @@ vector<int> randomVector(int n) {
 * @param key - the key we are searching for within vector v.
 * @return the index of the element matching key, otherwise -1 if key is not found.
 */
-int binarySearch(vector<int> v, int key, int& comp) {
+int binarySearch(vector<int>& v, int key, int& comp) {
 	int pivot, left = 0, right = v.size() - 1;
 
 	while (left <= right) {
@@ -67,7 +67,7 @@ int binarySearch(vector<int> v, int key, int& comp) {
 * @param key - the key we are searching for within vector v.
 * @return the index of the element matching key, otherwise -1 if key is not found.
 */
-int linearSearch(vector<int> v, int key, int& comp) {
+int linearSearch(vector<int>& v, int key, int& comp) {
 	for (int i = 0; i < v.size(); i++) {
 		comp++;
 		if (v[i] == key) {

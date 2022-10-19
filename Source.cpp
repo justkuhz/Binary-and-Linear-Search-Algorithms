@@ -4,7 +4,7 @@ using namespace std;
 
 int main() {
 
-	int n = 100; // size of vector
+	int n = 1000000; // size of vector
 
 	// generate random vectors
 	vector<int> v1 = randomVector(n); // used for binary search
