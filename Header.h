@@ -39,7 +39,7 @@ vector<int> randomVector(int n) {
 * 
 * Prints out the number of comparisons or checks that are made against the key.
 * 
-* @param v - sorted vector of elements to search through.
+* @param v - reference to a sorted vector of elements to search through.
 * @param key - the key we are searching for within vector v.
 * @return the index of the element matching key, otherwise -1 if key is not found.
 */
@@ -63,7 +63,7 @@ int binarySearch(vector<int>& v, int key, int& comp) {
 * index i is equal to the key. If we find a match, return index i. Otherwise, return -1.
 * Prints the number of comparisons made.
 * 
-* @param v - vector of elements to search through.
+* @param v - reference tp vector of elements to search through.
 * @param key - the key we are searching for within vector v.
 * @return the index of the element matching key, otherwise -1 if key is not found.
 */
